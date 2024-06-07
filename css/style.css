@@ -5,18 +5,10 @@ elemento (APLICA PARA UNA ETIQUETA DE HTML){
 }
 */
 
-@media only screen and  (max-width: 400px){
-    body{
-        font-size: 15px;
-        background-color: #eee;
-        max-width: 400px;
-    }
-
-}
-
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -33,42 +25,47 @@ body{
 
 header {
     background-color: #008B8B;
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    margin: auto;
-    height: 200px;
+    position: sticky;
+    z-index: 100;
+    top: 0;
 }
 .logoHuellitas {
-    width: 150px;
-    height: 150px;
-    margin: 10px;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+}
+nav ul{
+    display: flex;
 }
 
-nav{
+nav {
     display: flex;
-    flex-grow: 1;
-    color: #eee;
-    padding: 0;
-}
-.nav__ul {
-    display: flex;
-    margin: 0;
+    justify-content: space-between;
 }
 
-.nav__items {
-    display: flex;
-    margin: 0;
+ul{
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
 }
 
-a{
+nav ul li {
+    list-style: none;
+    padding: 5px;
+    border: 1px solid #FF00FF;
+    border-radius: 15px 10px;
+    margin-right: 5px;
+}
+
+nav ul li a {
     text-decoration: none;
-    padding: 0;
-    color: #111;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 a:hover{
-    color: #eee;
+    color: #FF00FF;
 }
 
 .menu-gral{
@@ -212,7 +209,7 @@ footer {
     background-color: azure;
     display: flex;
     position: sticky;
-    justify-content: space-between;
+    justify-content: space-around;
     bottom: 0px;
     padding: 20px;
     margin-top: 0;
